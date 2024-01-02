@@ -65,6 +65,7 @@ class OrderTest {
         assertThat(order.getRegisteredDateTime()).isEqualTo(registeredDateTime);
     }
 
+
     private Product createProduct(String productNumber, int price) {
         return Product.builder()
                 .productNumber(productNumber)
