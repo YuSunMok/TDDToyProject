@@ -34,6 +34,7 @@ class CafeKioskTest {
         assertThat(cafeKiosk.getBeverages().get(0).getName()).isEqualTo("아메리카노");
     }
 
+
     @Test
     public void addSeveralBeverages() {
         CafeKiosk cafeKiosk = new CafeKiosk();
