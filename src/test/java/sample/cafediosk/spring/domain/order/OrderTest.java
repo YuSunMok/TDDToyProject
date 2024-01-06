@@ -1,17 +1,14 @@
 
 package sample.cafediosk.spring.domain.order;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import sample.cafediosk.spring.domain.product.Product;
-import sample.cafediosk.spring.domain.product.ProductType;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 import static sample.cafediosk.spring.domain.product.ProductSellingStatus.SELLING;
 import static sample.cafediosk.spring.domain.product.ProductType.*;
 
@@ -45,7 +42,7 @@ class OrderTest {
         Order order = Order.create(products, LocalDateTime.now());
 
         // then
-        assertThat(order.getStatus()).isEqualByComparingTo(OrderStatus.INIT);
+        assertThat(order.getOrderStatus()).isEqualByComparingTo(OrderStatus.INIT);
     }
 
     @Test
